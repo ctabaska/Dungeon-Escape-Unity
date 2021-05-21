@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objective : MonoBehaviour
+public class Objective : MonoBehaviour
 {
     Transform[] objectives;
 

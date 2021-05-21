@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class collect : MonoBehaviour
+public class Collect : MonoBehaviour
 {
 
     AudioManager audioManager;

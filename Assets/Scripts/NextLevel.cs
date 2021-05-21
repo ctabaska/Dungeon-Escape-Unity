@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class next_level : MonoBehaviour
+public class NextLevel : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && gameObject.GetComponentInChildren<objective>().done)
+        if (other.gameObject.CompareTag("Player") && gameObject.GetComponentInChildren<Objective>().done)
         {
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
