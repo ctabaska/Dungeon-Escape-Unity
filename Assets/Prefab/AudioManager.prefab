@@ -80,4 +80,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Credits
+    clip: {fileID: 8300000, guid: bd7565ce2830f413688b7d5225db6975, type: 3}
+    volume: 0.06
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   audioMixer: {fileID: 24300002, guid: 862ee6687f8fd7c438a3338d36403763, type: 2}

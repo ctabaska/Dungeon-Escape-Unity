@@ -29,6 +29,14 @@ public class Movement : MonoBehaviour
         animator.SetFloat("xVelocity", Mathf.Abs(body.velocity.x));
         animator.SetFloat("yVelocity", body.velocity.y);
 
+        if (body.velocity.y <= -0.01f)
+        {
+            body.gravityScale = 5f;
+        }
+        else
+        {
+            body.gravityScale = 2.5f;
+        }
         if (Input.GetButtonDown("Jump")) {
             jump = true;
             animator.SetBool("IsJumping", true);
