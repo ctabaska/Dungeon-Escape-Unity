@@ -16,7 +16,6 @@ public class NextLevel : MonoBehaviour
 
             if (currentSceneIndex + 1 < SceneManager.sceneCountInBuildSettings)
             {
-                Debug.Log("Hellooo?>");
                 ProgressLevel.Invoke();
                 GoThroughDoor();
 
@@ -29,14 +28,16 @@ public class NextLevel : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         GameObject door = GameObject.Find("Door");
 
+        // set player rigidbody type to static
+        player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
         // move player to position of door
-        player.GetComponent<Transform>().position = door.GetComponent<Transform>().position;
+        player.GetComponent<Transform>().position = door.GetComponent<Transform>().position + new Vector3(0.0f, 0.5f, 0);
 
         // play animation state of door
-        player.GetComponent<Animator>().SetTrigger("doorway");
+        player.GetComponent<Animator>().SetBool("doorway", true);
 
-        // set player velocity to 0
-        player.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
-
+        // don't allow player to move
+        player.GetComponent<Movement>().allowMovement = false;
     }
 }

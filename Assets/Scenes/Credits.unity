@@ -628,7 +628,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escapeText: {fileID: 488612362}
-  audio: {fileID: 9076522572777729296, guid: 53a436bf4e739e54c95bb44c3e0c1437, type: 3}
 --- !u!1 &934123147
 GameObject:
   m_ObjectHideFlags: 0

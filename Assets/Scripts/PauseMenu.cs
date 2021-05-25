@@ -26,6 +26,10 @@ public class PauseMenu : MonoBehaviour
             {
                 Pause();
             }
+            else if (optionsMenuUI.activeSelf)
+            {
+                optionsMenuUI.GetComponent<OptionsMenu>().optionsBack();
+            }
             else
             {
                 Resume();

@@ -16,11 +16,13 @@ public class Movement : MonoBehaviour
 
     public Rigidbody2D body;
 
+    public bool allowMovement = true;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+          
     }
 
     void Update() {
@@ -37,7 +39,7 @@ public class Movement : MonoBehaviour
         {
             body.gravityScale = 2.5f;
         }
-        if (Input.GetButtonDown("Jump")) {
+        if ( allowMovement && Input.GetButtonDown("Jump")) {
             jump = true;
             animator.SetBool("IsJumping", true);
         }
@@ -50,7 +52,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+        if (allowMovement)
+            controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
 
         jump = false;
 
